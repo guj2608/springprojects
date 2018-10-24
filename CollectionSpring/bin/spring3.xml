@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	
+		 
+	
+	 <bean id="mob" class="com.cg.CollectionService.service.Mobile">
+<property name="mobileid" value="132"></property>
+<property name="mobileName" value="Apple 7"></property>
+<property name="mobileprice" value="40000"></property>
+<property name="invent">
+<list>
+<ref bean="one"></ref>
+<ref bean="two"></ref>
+<ref bean="three"></ref>
+</list>
+</property></bean>
+
+<bean id="one"  class="com.cg.CollectionService.service.Inventory">
+<property name="mobilecount" value="55"></property>
+<property name="mobilecompany" value="samsung"></property>
+
+</bean>
+<bean id="two"  class="com.cg.CollectionService.service.Inventory">
+<property name="mobilecount" value="10"></property>
+<property name="mobilecompany" value="mi"></property>
+
+</bean>
+<bean id="three"  class="com.cg.CollectionService.service.Inventory">
+<property name="mobilecount" value="560"></property>
+<property name="mobilecompany" value="nokia"></property>
+
+</bean>
+
+</beans>
